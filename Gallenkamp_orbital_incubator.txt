@@ -1,0 +1,17 @@
+These notes on how to program it were found here:
+http://bmbsgi10.leeds.ac.uk/labman/orb.html
+
+
+
+
+8.13. Gallenkamp Orbital Incubator Shaker
+
+The orbital incubatoris usually switched on and ready to use with the temperature set at 37° C and the shaker speed set at 200 rpm. However it is important to understand the machine settings. For programmed operation (not usually needed) you will have to read the manual.
+
+To operate the Shaker Controller (upper panel) press Set Mode and when RPM flashes you can key up or down for the required speed. Do not use speeds greater than 200 rpm with a platform full of large flasks, the effect is too violent and the retaining springs could break!
+
+To operate the Temperature Controller (lower panel) press Actual / Set to illuminate the Set light then follow the sequence of settings. Normally for non-programmed use the settings are CYC (continuous operation); Step 1; Temp 37° C; Time Hold; Shaker OFF(non-programmed). You can alter the settings by pressing the Actual / Set key and using the up / down keys at the appropriate stage. Press Stop Run to exit then Start Run for the set temperature to be reached. The only illuminated light during normal use should be the one by Start Run . The temperature displayed will then be Actual Temperature, with Step 1 displayed along with Time on Hold with the colon "flashing". Always make sure that the temperature displayed is actual and not set or you will think that your cultures are at 37° C when they are only at ambient temp.
+
+Control the shaker by pressing Start or Stop. When opening the lid the shaker stops automatically.
+
+Place your flasks in a balanced position on the platform to avoid damage to the shaker mechanism and if there is any spillage of culture see Keith who has a supply of disinfectant granules. If a flask is loose in its clip you can try to tighten the clip by squeezing it inwards.
