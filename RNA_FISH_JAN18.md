@@ -49,6 +49,8 @@ Set "Bin" to 1x1
 uncheck the "Aux Max" box if you are not using it (this is the push out lever on the right hand side of the microscope that lets you increase the magnification by 1.6x)
 5. Make sure the dial under the eye piece is set to 'eyepiece' when you are looking down the lens and  to "camera" when acquiring images 
 6. Use the front wheel to set light on DAPI, Cy5, TritC etc (Ex, Em, (Ep = eyepiece) should all show the same)
+  - NB: POL = Brightfield
+  - if you need to change the filters (e.g. using synthetic(GFP) rather then organic (Cy3/DAPI) filters you can do this by clicking on the settings cog/files/Selectfilters - make sure you click ACTIVATE!
 7. Push the "EX" button of the keyboard to turn it on. 
 
 
