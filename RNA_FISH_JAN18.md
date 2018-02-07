@@ -105,16 +105,50 @@ TIPS
   - The size of each step is doubled each time by the STEP INCREASE button and halved each time the STEP DECREASE button.
   - you can adjust the stepsize to the frame size so that each step arrow will move one frame so you can scan large areas easily
 
+Image analysis 
+--------------
 
+1) Deconvolution: 
+    - Removes blur from image caused by light scatter 
+    - reasigns scatter to origional point using point spread function  
+    - improves contrast and comparative intensities
 What is deconvolution 
-  - computational intensive image processing techicque to imrpove contrat and resolution - it removes or reverses the blurring from limited apertures 
+
+1) click process / deconvolve
+2) Enter the path to the origional `_R3D.dv` image file in the Input field
+    e.g. `/usr/zippy_data/expt_date/file_name_RD3.dv`
+    by clicking input to find the file
+    - a output file will be created by adding `_D3D.dv` extension
+3) Enter the `.otf` (optical transfer function file) file into the OTF file field 
+    - check the lens ID number in the measured data and the OTF to verify the correct OTF in  being used,. 
+4) if you want you can click the 'Show image when finished' checkbox
+5) click 'Run options' - select add to Queue from drop down list
+6) Click 'Do It'
+7) Do Steps 2-6 for all your files
+8) In the Queue managed dialog bos choose 'Start Now' 
+
+TIPS - different deconcultion methods do different thins
+-----
+DECONVOLUSTION =  computational intensive image processing techicque to imrpove contrat and resolution - it removes or reverses the blurring from limited apertures 
   - ENABLES WIDEFIELD MIRCROSCOPES TO HAVE SAME RESOLUTION AS CONFOCALS 
   - Removes
       - Noise = can be removed in preprocessing as well understood
       - Scatter = depend on thickness 
       - Blur = removed by deconvolution = signal spreading (point spread function)
       - Glare 
-  
+ 
+The deconvolution in softworc uses ' Constrained Iterative Deconvolution ' (Agard 1984)
+Ratio (conservative) = more conservative algorithm - might be better for images with punctate fluorescence
+Enhanced Ratio = default method (faster then Ratio method) 
+
+Additive = uses a more conservative algorith - Better for EMCCS electron multiplication camera & more tolerant of noisy data
+Enhanced Additive = faster then Additive - Better for EMCCS electron multiplication camera (not sure if we have this) - more tolerant of noisy data 
+
+Correct Image = correct photobleaching errors & correct intensity values between time-lapse experiment - this is applied by default during deconvolution **Applied by default during deconvolution**
+Equalise Time points = equalise intensities to a reference timepoint you select - should only be used for display NOT quantitative purposes 
+Calibrate = calibrate raw image when have calibration file and bad pixel file that applied to camera and conditions 
+Align Image = correct motion artifacts, problems with z sectioning or problems with time series from single wavelength experiments 
+Chromatic Aberration Corrector = adjust channels relative to each other to correct for colur shifts from oil matching, objective abnormalities or other enviromental condtions  
   
 Z Sectioning
   - If have used an overscan method to make sure you get all the nessecary z-section  cut out the unecessary ones during deconvolution by specifying the section numbers of the Z start and Z end 
