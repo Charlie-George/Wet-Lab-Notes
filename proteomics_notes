@@ -1,0 +1,25 @@
+
+
+
+Normalisation of peptide intensities 
+
+
+Visulisation of proteomics data using R & bioconductor - explanation of differnt graphs and QC plots and how to do them 
+https://bioconductor.org/packages/devel/data/experiment/vignettes/RforProteomics/inst/doc/RProtVis.html#1_introduction
+
+sva remove batch effects
+http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161
+
+Good resources  - 
+
+Slides and training materials for all sorts of bioinformatics 
+https://edu.isb-sib.ch
+
+Statistics overview
+https://www.uab.edu/proteomics/pdf_files/Class-02-17-04.pdf
+
+
+Intresting references 
+
+1) Pervasive Protein Thermal Stability Variation during the Cell Cycle https://www.sciencedirect.com/science/article/pii/S0092867418303854
+- looks at protein abundance and stability over the cell cycle - some proteins exhibit changes in stability rather then changes in abundance - notably changes in abundance and stability are not great over the cycle - the main point of change seems to be at the mitotic stage 0 through out the rest of the cycle minimal abundance or protein changes are seen 
