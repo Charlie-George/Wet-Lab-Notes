@@ -23,3 +23,97 @@ Intresting references
 
 1) Pervasive Protein Thermal Stability Variation during the Cell Cycle https://www.sciencedirect.com/science/article/pii/S0092867418303854
 - looks at protein abundance and stability over the cell cycle - some proteins exhibit changes in stability rather then changes in abundance - notably changes in abundance and stability are not great over the cycle - the main point of change seems to be at the mitotic stage 0 through out the rest of the cycle minimal abundance or protein changes are seen 
+
+
+
+http://www.mcponline.org/content/15/8/2791.full
+Systematic Errors in Peptide and Protein Identification and Quantification by Modified Peptides
+
+https://pubs.acs.org/doi/pdf/10.1021/pr501223t
+Summarization vs Peptide-Based Models in Label-Free Quantitative Proteomics: Performance, Pitfalls, and Data Analysis Guidelines
+
+A six-plex proteome quantification strategy reveals the dynamics of protein turnover
+https://www.nature.com/articles/srep01827
+
+
+Useful for methods
+Tracking the embryonic stem cell transition from ground state pluripotency
+http://dev.biologists.org/content/144/7/1221?panels_ajax_tab_tab=jnl_template_cob_tab_supp&panels_ajax_tab_trigger=supplemental
+- TMT proteome discoverer
+- Unique peptides -> proteins need 2+ peptides in, 
+- k means cultering k1-3 and then chose based on BIC 
+
+Phosphoproteome dynamics during mitotic exit in budding yeast
+http://emboj.embopress.org/content/early/2018/04/11/embj.201798745
+
+http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0042835
+2012 Time-Course Proteome Analysis Reveals the Dynamic Response of Cryptococcus gattii Cells to Fluconazole
+
+Methods for Proteomic Analysis of Transcription Factors 2009
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2778203/
+
+https://www.cell.com/cms/attachment/600674/4730069/mmc1.pdf?code=cell-site
+Weak functional constraints on phosphoprot eomes Christian R. Landry*, Emmanuel D. Levy* and Stephen W. Michnick
+
+
+
+
+2015 Integrated analysis of global proteome, phosphoproteome, and glycoproteome enables complementary interpretation of disease-related protein networks
+https://www.nature.com/articles/srep18189
+Identification of differentially expressed proteins, phosphoproteins and glycoproteins
+The raw data used in this study were deposited into PRIDE database (dataset identifier PXD003115)12,13. iTRAQ intensities of the 143,020, 140,165, and 143,133 aligned peptides (on average, 142,106 peptides; Supplementary Table S2a–c) were normalized using the quantile normalization method14. Log2-fold-changes of the proteins between gastric cancer and adjacent normal tissues were estimated using the linear-programming method, as previously described15, based on the bipartite graph representing protein groups. Of these quantified proteins, the proteins more than two non-redundant peptides were chosen for the following analyses. First, a statistical hypothesis test for the log2-fold-changes was used to identify differentially expressed proteins (DEPs)16. An empirical null distribution was estimated by applying Gaussian kernel density estimation method to log2-fold-changes obtained after performing all possible permutations of 114–117 labels17. The proteins with P < 0.05 at least in one of the three tissue pairs were identified as the DEPs. Second, for 19,421, 16,973, and 20,144 phosphopeptides and 4,405, 4,161, and 3,491 N-glycopeptides (on average, 18,846 phosphopeptides and 4,019 N-glycopeptides; Supplementary Table S2a–c), the quantile normalization and the same statistical method was used at the peptide level. The empirical distribution and P-values were estimated for the log2-fold-changes of the peptides. Differentially phosphorylated proteins (DPPs) and differentially N-glycosylated proteins (DGPs) were identified as the proteins that contained the unique phosphopeptides and N-glycopeptides with P < 0.05, or the unique peptides detected exclusively in either the gastric tissue or the normal tissue. Finally, the enrichment analyses of gene ontology biological processes (GOBPs), gene ontology cellular components (GOCCs), and Kyoto encyclopedia of genes and genomes (KEGG) pathways18 were performed for the DEPs, DPPs, and DGPs using ConsensusPathDB19 software. The GOBPs, GOCCs, and KEGG pathways represented by the DEPs, DPPs, and DGPs were identified as the ones with P < 0.1 (a default cutoff). Alternatively, Z score was also computed as Z = N−1 (1 − P), where N−1(∙) is the inverse standard normal distribution and P is the enrichment P-value.
+
+Five types of cellular protein networks
+We categorized the cellular protein networks in the KEGG pathway database to the following five groups as shown in Supplementary Table S3: 1) metabolic networks, 2) cellular signaling networks, 3) cell cycle, DNA, and RNA processing networks, 4) protein homeostasis networks, and 5) cellular and organic interaction networks. The proteins in the cellular signaling networks were further grouped into receptor ligands, receptors, kinases/phosphatases, and transcription factors based on the gene ontology molecular functions (‘Receptor binding’, ‘Receptor activity’, ‘Kinase activity’, ‘Phosphatase activity’, and ‘Nucleic acid binding transcription factor activity’, respectively).
+
+Towards functional phosphoproteomics by mapping differential phosphorylation events in signaling networks.
+https://www.semanticscholar.org/paper/Towards-functional-phosphoproteomics-by-mapping-in-Bentem-Mentzen/7586b8f80bd0c43a02a520f66702e85904e61416
+
+A systematic evaluation of normalization methods in quantitative label-free proteomics
+https://academic.oup.com/bib/article/19/1/1/2562889
+
+Unbiased dynamic characterization of RNA-protein interactions by OOPS
+https://www.biorxiv.org/content/biorxiv/early/2018/05/29/333336.full.pdf
+
+Ponceau protocol 
+https://pages.wustl.edu/levin/ponceau-staining
+http://www.abcam.com/protocols/transfer-and-staining-of-proteins-in-western-blot
+https://www.researchgate.net/post/Problem_in_Ponceau_staining_after_protein_Transfer
+https://www.thermofisher.com/us/en/home/references/protocols/proteins-expression-isolation-and-analysis/western-blot-protocol/western-blotting-using-polyvinylidene-difluoride-membranes.html
+Summary of differnt staining methods
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5646381/
+**This stain might be better** 
+http://www.thermofisher.com/order/catalog/product/24585
+https://www.thermofisher.com/order/catalog/product/S11791
+
+
+dot blot protocol
+http://www.abcam.com/ps/pdf/protocols/dot%20blot%20protocol.pdf
+
+http://www.thermofisher.com/order/catalog/product/24585
+An additional visualization technique for PVDF membranes is transillumination, described by Reig and Klein (1988). In that technique, the membrane is dried at room temperature, then wet with 20% methanol and viewed using white light. Protein bands appear as clear areas. Sensitivity is usually comparable to that of Coomassie blue staining. This approach was recently demonstrated to also be compatible with the new low fluorescence PVDF membranes such as Immobilon-FL (Park, Mauchi, Sharma, 2015). This simple, fast method is a very attractive strategy for imaging blots prior to fluorescent immunodetection.
+
+
+TMT protocol
+http://www.biotech.cornell.edu/sites/default/files/uploads/Documents/Proteomics_protocols/Protocol%2017_TMT%20labeling.pdf
+
+
+Factors of interest
+
+HHO1
+http://www.uniprot.org/uniprot/P53551
+HOG1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
