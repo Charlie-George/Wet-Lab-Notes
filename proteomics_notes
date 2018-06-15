@@ -1,5 +1,84 @@
 
+Dynamics and Spatial Genomics of the Nascent Transcriptome by Intron seqFISH
+https://www.cell.com/cell/fulltext/S0092-8674(18)30647-0
 
+
+SVA package - remove batch effects 
+https://www.bioconductor.org/packages/release/bioc/vignettes/sva/inst/doc/sva.pdf
+http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161
+http://jtleek.com/genstats/inst/doc/02_13_batch-effects.html
+
+
+Metabolic cycling without cell division cycling in respiring yeast
+http://www.pnas.org/content/108/47/19090
+These results suggest that the yeast metabolic cycle reflects a growth cycle during G1/G0 and explains our previous puzzling observation that genes annotated to the CDC increase in expression at slow growth
+
+2018 Pervasive Protein Thermal Stability Variation during the Cell Cycle
+https://www.cell.com/cell/pdf/S0092-8674(18)30385-4.pdf
+change in stability and abundance - but in G1 most changes in abundance 
+
+2015 Proteome-wide quantitative multiplexed profiling of protein expression: carbon-source dependency in Saccharomyces cerevisiae
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4710237/
+
+Perseus tutorial 
+http://www.coxdocs.org/doku.php?id=perseus:user:use_cases:interactions
+https://www.cell.com/cell/pdf/S0092-8674(18)30385-4.pdf
+
+
+log2 data 
+histogram - are the data more or less normallu distributed
+group samples 
+filter based on valid values
+impute values 
+visulise where imputed values are on histogram
+scatter plot correlations - pearson 
+PCA/Hierachical clustering - distance = euclidiean, linakge = average - should be mostly the same with a few differences 
+T-test & volcano plot 
+profile plots 
+
+Philip 
+- TMT labelling effected by PH - Ph8-> 8.5 at this ph the N-term should be more acessible then the lysine - if ph is above 8.5 then the labelling is not efficent - more lysines will be available but also the TMT tags will degrae within 1 hr 
+- The labelling of the reactions seem to be inefficent as all labelling should occur at the N-term, and then at the K resiude
+should have approx 50% 1xTMT - labelled at N-term and approx 50% 2xTMT - labelled at N-term & K
+- the pattern is not dependent on abundance 
+- the pattern is more pronouced in the phosphodata 
+- the pattern is not a result of the instrument or the instrument set up with the machine calling the wrong peaks - the parameters seem to be set up sufficently 
+- - More AA in solution = higher PH 
+- Is there something biological at these timepoints that mean there is a higher or inaccurate ph reading
+
+
+**TODO** CHECK pH OF SAMPLES AT THE POINT THEY WERE PROCESSED 
+
+
+
+- General workflow 
+  - log2 
+  - median center
+  - if not normally distributed just need to take this into account in your statistical tests
+  
+  - contaminants filtering - use crapome and filter them out early on 
+  - FDR and protein qiuantification 
+      - filter based on peptide PEP & q-value 
+      - then at the protein level just pick proteins with more then 2 peptides
+      
+
+
+PTM 
+
+-filter based on localisation probability > 0.75
+- want each row as differnt modification, each sample = column 
+log2 
+add protein annotations
+add sequence modifications - http://www.phosphosite.org/staticDownloads.do phoshositeplus 
+add linear motifs
+add known sites 
+add known kinase substrate relations 
+group sample 
+remve rows based on valid values 
+histogram 
+median subrtraction to center and normalise the data
+multiscatter plot
+imputation 
 
 Normalisation of peptide intensities 
 
@@ -74,6 +153,77 @@ https://academic.oup.com/bib/article/19/1/1/2562889
 
 Unbiased dynamic characterization of RNA-protein interactions by OOPS
 https://www.biorxiv.org/content/biorxiv/early/2018/05/29/333336.full.pdf
+
+698 Proteomics bioinformatics and data analysis
+699 Peptide-level output from Proteome Discoverer was re-processed with the
+700 add_master_protein.py script (https://github.com/TomSmithCGAT/CamProt) to ensure uniform
+701 peptide to protein assignment for all samples from a single experiment and identify peptides
+702 which are likely to originate from contaminating proteins such as keratin (see supplementary
+703 notes). For quantitative experiments, peptide-level quantification was obtained by summing the
+704 quantification values for all peptides with the same sequence but different modifications.
+705 Protein-level quantification was then obtained by taking the median peptide abundance. For
+706 SILAC experiments, the ratio between treatment and control protein abundance was calculated
+707 for each sample separately and aggregated to average protein ratio. For TMT experiments,
+708 data analysis was performed using the MSnbase R package56. Log2-transformed protein
+709 abundance was centre-median normalised within each sample. For the crude fractionation
+710 experiments (n=5), the protein abundance was quantified by label-free quantification, averaged
+711 across the replicates per fraction and normalised per protein such that the sum of abundances
+712 over the 3 fractions was 1. For the U2OS RBP-Capture experiment, only proteins observed in
+713 all 3 CL replicates and no NC replicates were retained. In crosslink-testing SILAC
+714 experiments, only proteins present in at least 2 replicates were retained.
+715
+716 GO terms, Interpro protein domains and KEGG pathway annotations were obtained using the
+717 R package UniProt.ws57. GO terms were expanded to include all parent terms using the R
+718 package GO.db58. Glycoproteins were identified using the Uniprot59 API with categories=PTM
+32
+bioRxiv preprint first posted online May. 29, 2018; doi: http://dx.doi.org/10.1101/333336. The copyright holder for this preprint (which was not peer-reviewed) is the author/funder. It is made available under a CC-BY 4.0 International license.
+719 and types=CARBOHYD. Transmembrane proteins were identified using the Uniprot API with
+720 types=TRANSMEM.
+721
+722 Data handling and statistics
+723 Data handling was performed with R v3.4.1 using tidyverse packages and python v3.6.5.
+724 Plotting was performed with the ggplot2 R package60.
+725 Proteins observed only in CL in at least one replicate were deemed enriched. For the RNAse-
+726 testing SILAC experiments, proteins only ever observed in the RNAse condition at the organic
+727 phase were deemed enriched. Vis versa, those only ever observed in the control condition at
+728 the interfaces were deemed depleted. For proteins which did not meet these criteria, all
+729 peptides observed across the replicates were treated as independent observations and a
+730 Mann-Whitney-Wilcoxon Test was used to test whether the log2 median CL:NC or
+731 RNase:Control ratio was > 0 (enriched) or < 0 (depleted), with a BH-adjusted p-values < 0.05
+732 considered significant. Proteins with less than 6 peptides were excluded from the statistical
+733 test due to insufficient power.
+734 GO, InterPro and KEGG over-representation analyses were conducted using the R package
+735 goseq to account for protein abundance. p-values were adjusted to account for multiple testing
+736 using the Benjamini-Hochberg61 FDR procedure. GO-terms with adjusted p-value <0.01 and at
+737 least 5 proteins were considered significantly over-represented. Over-representation values
+738 given are not adjusted for protein abundance. For U2OS and HEK-293, protein abundance
+739 was derived from62 taking the maximum abundance recorded across the replicates. For
+33
+
+bioRxiv preprint first posted online May. 29, 2018; doi: http://dx.doi.org/10.1101/333336. The copyright holder for this preprint (which was not peer-reviewed) is the author/funder. It is made available under a CC-BY 4.0 International license.
+740 MCF10A, we used an in-house deep proteomics data set. For E.coli, protein abundance was
+741 obtained from PaxDB63.
+742 For the nocodazole arrest/release experiment, proteins with a change in abundance or RNA
+743 binding were identified using the lm function in R. Specifically, to identify protein with a change
+744 in abundance between nocodazole arrest and 6 h release, total protein abundance was
+745 modelled as a function of the time point alone (abundance ~ timepoint). The p-values for the
+746 timepoint coefficients for each proteins were adjusted to account for multiple hypothesis testing
+747 according to Benjamini-Hochberg61 and proteins with an adjusted p-value < 0.01 (1 % FDR)
+748 were considered to have changed abundance. To identify proteins with a change in RNA
+749 binding between nocodazole arrest and 6 h release, protein abundance in the total proteome
+750 and OOPS samples was modelled as a function of the time point, the abundance type (total or
+751 OOPS), and the interaction between these two variables (abundance ~ timepoint + type +
+752 timepoint*type). Here, the interaction term denotes whether the abundance in OOPS and total
+753 follows the same pattern across the timepoints (coefficient is zero), indicating total abundance
+754 determines the amount of protein bound to RNA, or diverges (non-zero coefficient), indicating
+755 a change in RNA binding between the timepoints. The p-values for the interaction term were
+756 obtained and adjusted as indicated above. For the heatmap representation, protein
+757 abundances were z-score normalised within the total and OOPS samples separately.
+758 Hierarchical clustering was performed with the R hclust function using 1-Spearman’s rho as
+759 the distance metric and average linkage.
+760 For details of the identification of RNA binding sites see supplementary notes.
+
+
 
 Ponceau protocol 
 https://pages.wustl.edu/levin/ponceau-staining
